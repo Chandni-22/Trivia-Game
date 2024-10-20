@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🤔 Trivia Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Form for entering player details -->
+    <div id="game-setup">
+        <form>
+            <div class="player-container">
+                <div class="player-input">
+                    <label for="Player1">Player 1:</label>
+                    <input type="text" name="Name" id="Player1" placeholder="Enter Name" required>
+                </div>
+                <div class="player-input">
+                    <label for="Player2">Player 2:</label>
+                    <input type="text" name="Name" id="Player2" placeholder="Enter Name" required>
+                </div>
+            </div>
+            <div>
+                <label for="category">Choose a category:</label>
+                <select name="category" id="category">
+                    <option value="Select" selected disabled>Select</option>
+                </select>  
+            </div>
+            <button type="button" id="start-game">Start</button>
+        </form>
+    </div>
+
+    <!-- Game area (hidden initially) -->
+    <div id="game-area">
+        <div class="player-info">
+            <div id="player1-info">
+                <h2>Player 1: <span id="player1-name"></span></h2>
+                <p>Score: <span id="player1-score"></span></p>
+            </div>
+            <div id="player2-info">
+                <h2>Player 2: <span id="player2-name"></span></h2>
+                <p>Score: <span id="player2-score"></span></p>
+            </div>
+        </div>
+        <div id="question-area">
+            <p id="difficulty">Difficulty: </p>
+            <p id="question"></p>
+            <div id="answers"></div>
+        </div>
+        <button id="next-question">Next Question</button>
+    </div>
+
+    <!-- Winner message container (hidden initially) -->
+    <div id="winner-message">
+        <h2 class="winner-title"></h2>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🤔 Trivia Game</title>
+    <style>
+        body,html{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            background-color: #282c34;
+        }
+        .front-div{
+            background: #1e2027;
+            padding: 60px 40px;
+            border-radius: 12px;
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+            transition: transform 0.4s ease-in-out;
+        }
+        h1{
+            font-size: 42px;
+            color: #ff7675;
+            margin-bottom: 20px;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+        }
+        h3{
+            font-size: 20px;
+            color: #d1d1d1;
+            font-weight: 300;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+        .front-btn{
+            background-color: #ff7675;
+            border: none;
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            color: white;
+            display: inline-block;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(255, 118, 117, 0.3);
+        }
+        .front-btn::before{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.5s ease;
+            z-index: 0;
+        }
+        .front-btn:hover{
+            background-color: #ff6b6b;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(255, 118, 117, 0.5);
+        }
+        .front-btn:hover::before{
+            transform: translate(-50%, -50%) scale(1);
+        }
+        .front-btn a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            position: relative;
+            z-index: 1;
+        }
+        .front-div:hover{
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body>
+    <div class="front-div">
+        <h1>Welcome to Two-Player Trivia Game!!</h1>
+        <h3>Are you excited for the battle? Let's see who is smarter— you or your friend!</h3>
+        <button class="front-btn">
+            <a href="game-page.html">Lets start</a>
+        </button>
+    </div>
+</body>
+</html>
